@@ -3,7 +3,7 @@
 import random
 
 def rolld6():
-    return random.randint(3,18)
+    return round((random.randint(1,100) * random.randint(1,100) + random.randint(1,450)) / random.randint(1,10), 0) % 6 + 1
 
 def standardArray():
     stdArrayNums = [15, 14, 13, 12, 10, 8]
@@ -22,12 +22,12 @@ def standardArray():
     return [stdStrength, stdDexterity, stdConstitution, stdIntelligence, stdWisdom, stdCharisma]
 
 def rollForStats():
-    rollStrength = rolld6()
-    rollDexterity = rolld6()
-    rollConstitution = rolld6()
-    rollIntelligence = rolld6()
-    rollWisdom = rolld6()
-    rollCharisma = rolld6()
+    rollStrength = rolld6() + rolld6() + rolld6()
+    rollDexterity = rolld6() + rolld6() + rolld6()
+    rollConstitution = rolld6() + rolld6() + rolld6()
+    rollIntelligence = rolld6() + rolld6() + rolld6()
+    rollWisdom = rolld6() + rolld6() + rolld6()
+    rollCharisma = rolld6() + rolld6() + rolld6()
 
     return [rollStrength, rollDexterity, rollConstitution, rollIntelligence, rollWisdom, rollCharisma]
 
